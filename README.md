@@ -59,3 +59,35 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 vue config
 vue-cli-service inspect
 ```
+
+----- 
+
+# Scoped CSS / [Локальный (scoped) CSS](https://vue-loader.vuejs.org/ru/guide/scoped-css.html)
+
+PostCSS simulates the behavior of Shadow DOM; no need to use classes or ids
+
+```html
+
+<style scoped>
+    .example {
+        color: red;
+    }
+</style>
+
+<template>
+    <div class="example">hi</div>
+</template>
+```
+
+```html
+
+<style>
+    .example[data-v-f3f3eg9] {
+        color: red;
+    }
+</style>
+
+<template>
+    <div class="example" data-v-f3f3eg9>hi</div>
+</template>
+```
