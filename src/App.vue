@@ -1,6 +1,17 @@
 <template>
-  <ComponentX componentValue="X"/>
-  <ComponentY componentValue="Y"/>
+  <ComponentX :RootComponentPropsName="name"
+              :RootComponentPropsAge="age"
+              @age-reduce="age--"
+              @age-reset="resetAge"
+  />
+  <ComponentY :RootComponentPropsAge="age"/>
+
+  <!-- Button #1 -->
+  <button type="button"
+          @click="age++">
+    RootComponentPropsAge++
+  </button>
+
   <img alt="Vue logo" src="./assets/logo.png">
   <!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <HelloWorld :msg="message"/>
@@ -20,9 +31,17 @@ export default {
   },
   data() {
     return {
-      message: '"Hello World" message from App data() using props'
+      message: '"Hello World" message from App data() using props',
+      name: 'Tom',
+      age: 20
     }
-  }
+  },
+  methods:
+      {
+        resetAge(num) {
+          this.age = num
+        }
+      }
 }
 </script>
 
