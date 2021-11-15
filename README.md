@@ -1,7 +1,12 @@
 Vue CLI v4.5.15 - Starter Vue Project
 -----
 
-Demo is [here](https://webdevelopua.github.io/vue-cli-v4/)
+### Demo is [here](https://webdevelopua.github.io/vue-cli-v4/)
+
+## Prerequisites:
+
+* [16.13.0 LTS](https://nodejs.org/en/)
+* [Vue CLI 4.x](https://cli.vuejs.org/guide/installation.html)
 
 ``` 
 npm i @vue/cli -g
@@ -19,8 +24,8 @@ npm run serve
 
 App running at:
 
-- Local:   http://localhost:8080/
-- Network: http://192.168.1.104:8080/
+- [Local](http://localhost:8080/)   
+- [Network](http://192.168.1.104:8080/)
 
 ------
 
@@ -62,7 +67,7 @@ vue-cli-service inspect
 
 ----- 
 
-# Scoped CSS / [Локальный (scoped) CSS](https://vue-loader.vuejs.org/ru/guide/scoped-css.html)
+## Scoped CSS / [Локальный (scoped) CSS](https://vue-loader.vuejs.org/ru/guide/scoped-css.html)
 
 PostCSS simulates the behavior of Shadow DOM; no need to use classes or ids
 
@@ -90,4 +95,28 @@ PostCSS simulates the behavior of Shadow DOM; no need to use classes or ids
 <template>
     <div class="example" data-v-f3f3eg9>hi</div>
 </template>
+```
+
+-----
+
+
+## [SASS](https://vue-loader.vuejs.org/guide/pre-processors.html#sass)
+
+``` 
+npm i node-sass sass-loader --save-dev
+npm i node-sass -D
+npm i sass-loader -D
+
+npm audit fix
+npm cache clean --force
+npm cache rm --force
+npm cache verify
+```
+
+---- 
+
+## [PostCss](https://vue-loader.vuejs.org/guide/pre-processors.html#postcss)
+
+``` 
+Vue Loader v15 no longer applies PostCSS transforms by default. You will need to use PostCSS via postcss-loader.
 ```
