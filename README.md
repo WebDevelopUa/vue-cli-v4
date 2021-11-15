@@ -18,30 +18,44 @@ npm run serve
 ```
 
 App running at:
+
 - Local:   http://localhost:8080/
 - Network: http://192.168.1.104:8080/
 
 ------
 
 ### Project setup
+
 ```
 npm install
 ```
 
 #### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
-#### Compiles and minifies for production
+#### Compiles and minifies for production [vue-cli-service build](https://cli.vuejs.org/ru/guide/cli-service.html#vue-cli-service-build) or [staging](https://rangle.io/blog/custom-build-modes-with-vue-cli-3/)
+
 ```
 npm run build
+vue-cli-service build --dest dist
+
+vue-cli-service build --dest docs
 ```
 
 #### Lints and fixes files
+
 ```
 npm run lint
 ```
 
 #### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+``` 
+vue config
+vue-cli-service inspect
+```
