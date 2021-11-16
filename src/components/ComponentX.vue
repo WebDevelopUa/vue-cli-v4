@@ -17,9 +17,17 @@
     RootComponentPropsAge--
   </button>
 
+  <!-- Emit event (recommended) -->
+  <!-- easier to debug using Vue Dev Tools / Component events -->
   <button type="button"
           @click="onClickAgeReset">
     RootComponentPropsAge = 0
+  </button>
+
+  <!-- Call the function inside the parent component to get access to the data-->
+  <button type="button"
+          @click="resetAgeCallbackFn(0)">
+    resetAgeCallbackFn: 0
   </button>
 
   <h6>ageDoubled (computed): {{ ageDoubled }}</h6>
@@ -40,8 +48,10 @@ export default {
           validator(value) {
             return value > 0 && value < 40
           }
-        }
+        },
+        resetAgeCallbackFn: Function,
       },
+
   emits: ['age-reduce', 'age-reset'],
   computed: {
     ageDoubled() {

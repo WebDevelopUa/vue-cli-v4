@@ -3,6 +3,7 @@
               :RootComponentPropsAge="age"
               @age-reduce="age--"
               @age-reset="resetAge"
+              :resetAgeCallbackFn="resetAgeCallback"
   />
   <ComponentY :RootComponentPropsAge="age"/>
 
@@ -39,6 +40,9 @@ export default {
   methods:
       {
         resetAge(num) {
+          this.age = num
+        },
+        resetAgeCallback(num){
           this.age = num
         }
       }
