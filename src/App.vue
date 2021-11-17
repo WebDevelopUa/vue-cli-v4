@@ -1,4 +1,29 @@
 <template>
+
+  <!--  #1 pass down the sections to the form inside AppForm component; render with a <slot> tag -->
+  <AppForm>
+    <div class="help">
+      <p><i>Form status info</i></p>
+    </div>
+    <div class="fields">
+      <input type="text" placeholder="email">
+      <input type="text" placeholder="username">
+      <input type="password" placeholder="password">
+    </div>
+    <div class="buttons">
+      <button type="submit">
+        Send
+      </button>
+    </div>
+  </AppForm>
+
+  <!-- #2 -->
+  <AppForm/>
+
+  <br/>
+  <hr/>
+  <br/>
+
   <ComponentX :RootComponentPropsName="name"
               :RootComponentPropsAge="age"
               @age-reduce="age--"
@@ -22,10 +47,12 @@
 import HelloWorld from './components/HelloWorld.vue'
 import ComponentX from "./components/ComponentX";
 import ComponentY from "./components/ComponentY";
+import AppForm from "./components/AppForm";
 
 export default {
   name: 'App',
   components: {
+    AppForm,
     ComponentY,
     ComponentX,
     HelloWorld
@@ -42,7 +69,7 @@ export default {
         resetAge(num) {
           this.age = num
         },
-        resetAgeCallback(num){
+        resetAgeCallback(num) {
           this.age = num
         }
       }
