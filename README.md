@@ -24,7 +24,7 @@ npm run serve
 
 App running at:
 
-- [Local](http://localhost:8080/)   
+- [Local](http://localhost:8080/)
 - [Network](http://192.168.1.104:8080/)
 
 ------
@@ -99,7 +99,6 @@ PostCSS simulates the behavior of Shadow DOM; no need to use classes or ids
 
 -----
 
-
 ## [SASS](https://vue-loader.vuejs.org/guide/pre-processors.html#sass)
 
 ``` 
@@ -115,7 +114,9 @@ npm cache verify
 
 Примечание при использовании webpack 4
 
-При использовании webpack версии 4, по умолчанию во Vue CLI 4, следует убедиться в совместимости используемых загрузчиков. В противном случае будут появляться ошибки о конфликтующих зависимостях. В таких случаях можно использовать более старую версию загрузчика, которая всё ещё совместима с webpack 4.
+При использовании webpack версии 4, по умолчанию во Vue CLI 4, следует убедиться в совместимости используемых
+загрузчиков. В противном случае будут появляться ошибки о конфликтующих зависимостях. В таких случаях можно использовать
+более старую версию загрузчика, которая всё ещё совместима с webpack 4.
 
 ``` 
 npm install -D sass-loader@^10 sass
@@ -127,4 +128,16 @@ npm install -D sass-loader@^10 sass
 
 ``` 
 Vue Loader v15 no longer applies PostCSS transforms by default. You will need to use PostCSS via postcss-loader.
+```
+
+-------
+
+## [Slots](https://ru.vuejs.org/v2/guide/components-slots.html)
+
+```html 
+<template v-slot:header>
+  <h1>Heading</h1>
+</template>
+
+<slot></slot>
 ```
